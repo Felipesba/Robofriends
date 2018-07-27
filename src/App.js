@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
-// import { robots } from './robots';
 import './App.css';
-import Scroll from './Scroll'
+import Scroll from './Scroll';
+
 
 
 class App extends Component {
@@ -31,7 +31,7 @@ render(){
 		return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
 	});
 
-	if (this.state.robots.length === 0) {
+	if (!this.state.robots.length) {
 		return(<h1>Loading...</h1>);
 	} else {
 		return	(
